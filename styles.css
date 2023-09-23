@@ -27,8 +27,10 @@
     flex-direction: row;
     /*wraps to next row if they don't fit within the width*/
     flex-wrap: wrap;
-    /*any extra space (if available) along the main axis will be 
-    distributed evenly, pushing the flex items toward the center of the container*/
+    /* justify content is for main axis(horizontal line)
+       align-items is for vertical axis(cross axis)
+       however, flex direction set to column makes the main axis become vertical
+    */
     justify-content: center;
     align-items: center;
     /*controls the gap between grids*/
