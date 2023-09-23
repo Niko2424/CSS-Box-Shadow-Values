@@ -1,3 +1,6 @@
+/* '*' is a universal selector. It will select all the elements
+     the content's area remain fixed size, meaning any padding
+     and border added won't increase its overall dimensions*/
 * {
     box-sizing: border-box;
   }
@@ -18,11 +21,17 @@
   }
   
   .gallery {
+    /*makes gallery into a flexible container*/
     display: flex;
+    /*flex items(inside the container) has be in row*/
     flex-direction: row;
+    /*wraps to next row if they don't fit within the width*/
     flex-wrap: wrap;
+    /*any extra space (if available) along the main axis will be 
+    distributed evenly, pushing the flex items toward the center of the container*/
     justify-content: center;
     align-items: center;
+    /*controls the gap between grids*/
     gap: 16px;
     max-width: 1400px;
     margin: 0 auto;
@@ -33,10 +42,12 @@
     width: 100%;
     max-width: 350px;
     height: 300px;
+    /*maintains aspect ratio while covering the entire container
+      if aspect ratio doesn't match the container, it will be cropped*/
     object-fit: cover;
     border-radius: 10px;
   }
-  
+  /*targets pseudo-element??*/
   .gallery::after {
     content: "";
     width: 350px;
