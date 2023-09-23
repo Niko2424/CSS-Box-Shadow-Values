@@ -47,7 +47,7 @@
     object-fit: cover;
     border-radius: 10px;
   }
-  /*targets pseudo-element??*/
+  /*targets pseudo-element (after gallery have an empty content with a width of 350*/
   .gallery::after {
     content: "";
     width: 350px;
